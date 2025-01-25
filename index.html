@@ -1,0 +1,700 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>고객 가치와 혁신을 만드는 개발자</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="179c4d1c-6b3c-80f8-b90f-d429c778d263" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🧑‍💻</span></div><h1 class="page-title">고객 가치와 혁신을 만드는 개발자</h1><p class="page-description"></p></header><div class="page-body"><p id="179c4d1c-6b3c-8027-adc9-f5363b04d7f7" class="">2017년부터 지금까지, 비즈니스의 가치를 이해하고 실현시킬 수 있는 개발자 김동인입니다.</p><div id="179c4d1c-6b3c-8023-9ca6-fd9a9bd4fb76" class="column-list"><div id="e8517a58-f290-4b85-9ba3-50af9768ac8e" style="width:50%" class="column"><figure id="179c4d1c-6b3c-8033-8611-d33695d169c7" class="image"><a href="img/profile_photo.png"><img style="width:332.12247016087184px" src="img/profile_photo.png"/></a></figure><p id="179c4d1c-6b3c-8040-8a09-dfb28af700af" class="">
+</p></div><div id="d16610ba-de85-4f30-b0be-a4fd69ada776" style="width:50%" class="column"><h2 id="179c4d1c-6b3c-8012-a9f7-f72990708eaa" class=""><mark class="highlight-teal">연락처.</mark></h2><p id="179c4d1c-6b3c-807f-86f4-e17876dc944d" class=""><strong>이메일</strong> steve99890@gamil.com</p><p id="179c4d1c-6b3c-8067-8bfb-f0e688c7e3e7" class=""><strong>휴대폰</strong> 010-4039-6287</p><h2 id="179c4d1c-6b3c-8073-a76f-e66fb0915e56" class=""><mark class="highlight-teal">개발 공간.</mark></h2><p id="179c4d1c-6b3c-8079-a4e2-c596f4fc8c47" class=""><strong>링크드인</strong> <a href="https://www.linkedin.com/in/%EB%8F%99%EC%9D%B8-%EA%B9%80-7a49822a3/">링크드인</a></p><p id="179c4d1c-6b3c-80da-b320-c5d38ddcb705" class=""><strong>블로그</strong> <a href="https://velog.io/@festival__log/posts">벨로그</a></p><p id="179c4d1c-6b3c-80b1-b79d-dfc501e1628d" class=""><strong>깃허브</strong> <a href="https://github.com/donginKim?tab=repositories">깃허브</a></p></div></div><p id="179c4d1c-6b3c-801b-b957-e4c2277f2af7" class="">
+</p><hr id="179c4d1c-6b3c-8032-8775-e8a7a8568c85"/><h1 id="179c4d1c-6b3c-8053-a993-fc043d355279" class=""><mark class="highlight-teal">소개.</mark></h1><p id="179c4d1c-6b3c-809f-912a-e78412e68613" class="">디자인 전공이지만 개발의 재미에 빠져, 2017년부터 무작정 학원을 다니며 본격적으로 개발을 시작했습니다. 주로 백엔드 개발을 맡아 왔지만, 데이터 분석과 정제 작업도 담당하며 다양한 역량을 쌓아 왔습니다.</p><p id="179c4d1c-6b3c-8096-9639-ff56db20802e" class="">NHN Crossent에서는 PaaSXpert와 PaaS-Ta 같은 PaaS 클라우드 플랫폼을 개발했고, 그 과정에서 쿠버네티스를 연구해 플랫폼에 적용함으로써 새로운 서비스를 구현했습니다. 이후 십일번가에서는 콘텐츠 필진 플랫폼을 개발하면서, 기존 사이트를 분리해 MSA 형태로 전환하고, 레거시 소스 리팩터링과 코틀린 도입을 주도했습니다. 그 외에도 세 개 이상의 플랫폼에서 20여 개 프로젝트를 수행하며, 협업 과정과 개발자로서의 성공과 실패를 모두 경험했습니다.</p><p id="179c4d1c-6b3c-80a2-81e4-cc93781f1a64" class="">개발을 진행하기 전 <strong>전체적인 서비스 흐름을 파악</strong>하고, 더 <strong>나은 방향을 제시해 비즈니스 성장을 돕는 일</strong>을 최우선 가치로 삼고 있습니다. 이를 위해 <strong>서비스와 데이터를 면밀하게 분석하며 유저를 이해</strong>하기 위한 역량을 키워 왔습니다. 또한 “큰 파도는 혼자 만들 수 없다”는 생각으로 다양한 <strong>직무의 동료들과 적극적으로 커뮤니케이션하며 협업</strong>해 왔습니다.</p><p id="179c4d1c-6b3c-8079-aaaa-e5986aabfb3c" class="">데이터를 다각도로 분석하고 활용하는 것을 좋아하며, 비정제된 상용 데이터를 규칙적으로 관리해 정확도를 82%에서 94% 이상으로 개선한 경험이 있습니다.</p><p id="179c4d1c-6b3c-800a-98b2-d40c28963581" class="">
+</p><p id="179c4d1c-6b3c-80c2-8923-dc4cecd1e3cb" class="">현재는 더욱 발전된 개발자가 되고자 세 가지를 집중적으로 실천하고 있습니다.</p><ol type="1" id="179c4d1c-6b3c-8061-894f-d528b9ab26e9" class="numbered-list" start="1"><li><strong>데이터 정제 방안 고안</strong><ul id="179c4d1c-6b3c-8064-9e4b-e8f607531d9e" class="bulleted-list"><li style="list-style-type:disc">고객에게 불필요한 정보를 줄이고, 신뢰성 있는 데이터를 제공하기 위해 데이터 신뢰도를 높이는 방법을 연구하고 있습니다.</li></ul></li></ol><ol type="1" id="179c4d1c-6b3c-80cf-a68b-d3f77e3201b5" class="numbered-list" start="2"><li><strong>LLM 프롬프트 활용 연구</strong><ul id="179c4d1c-6b3c-8027-bf9d-ef98f67512f9" class="bulleted-list"><li style="list-style-type:disc">LLM 프롬프트와 머신러닝 기술을 접목해 데이터 정합성과 매칭 가능성을 높이고자 합니다. 그 첫 단계로, 적은 비용으로 높은 매칭률과 정확도를 달성하는 상품·카탈로그 매칭 배치를 만들고 있습니다.</li></ul></li></ol><ol type="1" id="179c4d1c-6b3c-8071-b505-e168d0da424a" class="numbered-list" start="3"><li><strong>개발 및 일상 관련 콘텐츠 제작</strong><ul id="179c4d1c-6b3c-80e5-ab7a-f8d12f4b14b4" class="bulleted-list"><li style="list-style-type:disc">개발을 효과적으로 학습하고 공유할 수 있는 교육 자료를 만들고, 이를 통해 우리의 일상생활에도 긍정적인 변화를 줄 수 있는 커뮤니티를 꾸준히 구축해 나가고자 합니다.</li></ul></li></ol><p id="179c4d1c-6b3c-803e-94b0-d2723d604aa1" class="">
+</p><p id="179c4d1c-6b3c-80f6-ac56-d5c1b31403b9" class="">
+</p><hr id="179c4d1c-6b3c-80f4-9a81-e5a90a8221be"/><h1 id="179c4d1c-6b3c-8014-ae9e-f8bd0315a97b" class=""><mark class="highlight-teal">경험.</mark></h1><p id="179c4d1c-6b3c-8025-a9f6-e58a0c3b7a45" class="">
+</p><h2 id="179c4d1c-6b3c-8055-bee3-f55f36771610" class=""><a href="https://crossent.com/">Crossent</a></h2><p id="186c4d1c-6b3c-80c6-9d62-d56b3fbfc746" class="">2017.10 ~ 2020.08</p><blockquote id="179c4d1c-6b3c-807c-a077-d683714968d9" class="">다양한 클라우드 솔루션(PaaS/SaaS 등) 제공</blockquote><div id="179c4d1c-6b3c-80c4-9a3a-d1aeed6a2b79" class="column-list"><div id="d62cac6f-5e6e-44c6-8a63-e8e63b18e289" style="width:25%" class="column"><p id="179c4d1c-6b3c-80b1-8a46-c74d411c8931" class=""><strong>클라우드 연구팀</strong></p><p id="179c4d1c-6b3c-8006-998e-cf5649ba8674" class="">
+</p><p id="55b69256-9124-4e5c-bd90-bd586ed46400" class="">Cloud Foundry, Kubernetes, Terraform, Ansible, Jenkins, Docker, Harbor</p></div><div id="36cfe23b-4c66-4c0a-ac3a-34e25a8d78ad" style="width:75%" class="column"><ul id="179c4d1c-6b3c-803d-9036-f8f89a9a3473" class="bulleted-list"><li style="list-style-type:disc"><strong>플랫폼 전환 및 운영</strong>: Cloud Foundry 기반 플랫폼을 Kubernetes 기반으로 전환하고 안정적으로 운영</li></ul><ul id="98a0748d-96d4-4f35-9a6d-d5225d74710e" class="bulleted-list"><li style="list-style-type:disc"><strong>자동화 개발</strong>: Terraform을 활용하여 클라우드 플랫폼 설치 과정을 자동화</li></ul><ul id="179c4d1c-6b3c-8090-96b5-d03b92efc193" class="bulleted-list"><li style="list-style-type:disc"><strong>CI/CD 파이프라인 구현</strong>: S2I(Source-to-Image) 방식을 통해 소스 코드 push만으로 Kubernetes에 배포되는 자동화 시스템 구축</li></ul><ul id="179c4d1c-6b3c-800e-946d-de44034e7a0f" class="bulleted-list"><li style="list-style-type:disc"><strong>컨테이너 이미지 보안</strong>: Harbor를 활용해 자체 컨테이너 이미지 보안 검사 시스템 개발</li></ul><ul id="179c4d1c-6b3c-800a-93d6-f9e9814d03e3" class="bulleted-list"><li style="list-style-type:disc"><strong>금융권 커스터마이징</strong>: 국민은행, 부산은행 등 금융권 고객사의 요구사항에 맞춰 플랫폼을 커스터마이징하고 운영</li></ul></div></div><h2 id="179c4d1c-6b3c-8005-a97b-ef2a71ec460e" class=""><a href="https://www.11st.co.kr/">11번가</a></h2><p id="186c4d1c-6b3c-80a4-9137-ca4bbff65386" class="">2020.08 ~ </p><blockquote id="179c4d1c-6b3c-805f-8a05-d68156a0d569" class="">SK텔레콤 계열의 대표적인 e커머스(오픈마켓) 플랫폼</blockquote><div id="179c4d1c-6b3c-80ea-96fd-ccf047df89d1" class="column-list"><div id="98010133-c759-4566-952f-d0d4c546fb39" style="width:25%" class="column"><p id="88dd116c-62a5-428b-8230-8f72e47cab8c" class=""><strong>검색데이터추천개발팀</strong></p><p id="179c4d1c-6b3c-80ac-843e-c6af2d017324" class=""><mark class="highlight-gray">11번가 콘텐츠 필진 개발</mark></p><p id="179c4d1c-6b3c-80ac-ae1c-d49f2b3f9882" class=""><em>Java 17, Spring Boot 3.0, Kotlin, JSP</em></p></div><div id="341f2550-5646-4f28-a9ee-ab7e2f84483c" style="width:75%" class="column"><ul id="ae4098a3-5cb0-4386-9c28-a2ecb3ec1382" class="bulleted-list"><li style="list-style-type:disc"><strong>콘텐츠 제작 필진 플랫폼</strong> 개발 및 운영</li></ul><ul id="179c4d1c-6b3c-80a0-b7cc-db7b5059703d" class="bulleted-list"><li style="list-style-type:disc">기존 십일번가 프로젝트 분리 → <strong>MSA</strong>로 전환해 버전 관리와 업데이트 효율성 확보</li></ul><ul id="179c4d1c-6b3c-800a-92f0-ced3db7440a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Java 8</strong>에서 <strong>Spring Boot 3.0 &amp; Java 17</strong> 버전으로 업그레이드</li></ul><ul id="179c4d1c-6b3c-80f5-9fb4-e7ba12ece6a0" class="bulleted-list"><li style="list-style-type:disc">의존성이 높은 소스 코드를 분석하여 <strong>리팩터링</strong> 진행</li></ul><ul id="179c4d1c-6b3c-80cc-a7ee-f5005be2748e" class="bulleted-list"><li style="list-style-type:disc">팀 내 스터디를 활성화해 <strong>Kotlin</strong> 전환 추진</li></ul><p id="9d013cb8-dbbc-49f1-8fb3-8339eb845039" class="">
+</p></div></div><div id="179c4d1c-6b3c-80ae-be24-d2f34a634c5f" class="column-list"><div id="5c588576-12f0-40e3-9624-ee2d00eab5bc" style="width:25%" class="column"><p id="f3508088-7570-4b33-bc41-d9cc0fe935e5" class=""><strong>카탈로그 개선 TF팀</strong></p><p id="179c4d1c-6b3c-80b9-9cad-c14c7c5a4fa2" class=""><mark class="highlight-gray">11번가 카탈로그 패키지</mark></p><p id="179c4d1c-6b3c-8087-a2d3-cd32cdd24761" class=""><em>Java 7, Spring Boot, JSP, iBatis, MyBatis</em></p><p id="179c4d1c-6b3c-80f4-ad11-cf9123fab847" class="">
+</p></div><div id="3a57c822-6bc6-42a7-84a5-0f325e86bc73" style="width:75%" class="column"><ul id="2b8dc377-f20c-4852-a086-66c48bb67c8a" class="bulleted-list"><li style="list-style-type:disc"><strong>쿼리 호출 기능 이관</strong>: BackOffice 프로젝트에 내장된 쿼리 호출 기능을 자체 관리 API 서버로 이전하여 유지 보수 및 관리 효율성 향상</li></ul><ul id="179c4d1c-6b3c-80ad-a6a0-d2ce508d42af" class="bulleted-list"><li style="list-style-type:disc"><strong>운영자 UI/UX 개선</strong>: ExtJS Grid 적용으로 운영자의 사용 편의성 증대</li></ul><ul id="179c4d1c-6b3c-809a-94a3-f638ad0d9220" class="bulleted-list"><li style="list-style-type:disc"><strong>메뉴 구조 개선</strong>: 드롭다운 메뉴를 트리 메뉴로 전환해 UI/UX를 개선하고 사용 편의성 증대</li></ul><ul id="179c4d1c-6b3c-80a4-ac00-d955ff3d9f9a" class="bulleted-list"><li style="list-style-type:disc"><strong>대용량 엑셀 기능 구현</strong>: Apache POI를 활용해 대용량 엑셀 업로드/다운로드 기능 개발</li></ul><ul id="179c4d1c-6b3c-80fe-b244-c676f90a67bb" class="bulleted-list"><li style="list-style-type:disc"><strong>팝업 구조 간소화</strong>: 3중 팝업을 1중 팝업으로 축소해 운영자 작업 정확도 향상 및 오류 건수 33% 감소</li></ul></div></div><div id="179c4d1c-6b3c-8016-9172-d00c559552e9" class="column-list"><div id="be7062aa-cbac-4131-aa92-bf3747a123eb" style="width:25%" class="column"><p id="7983b064-7a86-4c83-b69c-a06c0e46f3ea" class=""><strong>카탈로그개발팀</strong></p><p id="181d03af-6ac8-4ab6-96ee-3ba459f78cea" class=""><mark class="highlight-gray">11번가 상품 카탈로그 매칭</mark></p><p id="88bdfb8a-1518-472e-954b-bf9ef4498fbe" class=""><em>Java 7, Spring Boot, MyBatis, Spring Batch, Python, Django, Kafka</em></p><p id="90d6b051-661c-46f1-ba36-784119a8bc71" class="">
+</p></div><div id="c1a7d413-ca3e-4494-a660-6690444c4a31" style="width:75%" class="column"><ul id="47a2a8b0-ac7a-4361-9560-716ea3688773" class="bulleted-list"><li style="list-style-type:disc"><strong>이미지 pHash 매칭 구현</strong>: Python ImageHash 기능을 활용해 상품·카탈로그 이미지의 pHash를 추출하고 동일 pHash 매칭 로직 구현</li></ul><ul id="179c4d1c-6b3c-8020-9baa-c36c3b8d8bc5" class="bulleted-list"><li style="list-style-type:disc"><strong>Python API 서버 구축</strong>: Java에서 Python 호출 시 발생하는 인터프리터 지연 문제를 해소하기 위해 Python API 서버 도입</li></ul><ul id="179c4d1c-6b3c-8051-8767-d0ce610e38b1" class="bulleted-list"><li style="list-style-type:disc"><strong>소스 이관</strong>: 11번가 팀 내 배치에서 직접 호출하던 Python 코드를 Python API 서버로 전부 이전하여 효율성 증대</li></ul><ul id="179c4d1c-6b3c-8024-bf0b-ce9152e5615d" class="bulleted-list"><li style="list-style-type:disc"><strong>매칭 정확도 향상</strong>: 상품과 카탈로그 명의 PK, SUBK 활용으로 매칭 정확도를 89%에서 98%까지 개선</li></ul></div></div><div id="179c4d1c-6b3c-8073-b198-c4fab7a7660b" class="column-list"><div id="7727cd4a-77a2-4814-8f1e-58e7a38d2d5f" style="width:25%" class="column"><p id="e19bcd09-e2bd-45a1-bea4-6dca70c6feeb" class=""><strong>카탈로그개발팀</strong></p><p id="00b7e850-73ee-4685-8295-d28de3627506" class=""><mark class="highlight-gray">11번가 브랜드 </mark></p><p id="8aa0b814-889b-45e8-a14e-d3dd40a45578" class=""><em>Java 7, Spring Boot, MyBatis, Spring Batch, Python, Django,  Kafka</em></p><p id="5ffcdf96-51e2-4a31-a9d1-910acc3ba044" class="">
+</p></div><div id="daf53091-37f2-4221-b148-fe96d595b327" style="width:75%" class="column"><ul id="676f326e-65fa-42ca-90c4-95860aee0141" class="bulleted-list"><li style="list-style-type:disc"><strong>브랜드 재정비</strong>: 2017년 이후 방치된 브랜드 데이터를 재정비하기 위해 위키를 재작성하고 관련 프로세스를 개선</li></ul><ul id="17bc4d1c-6b3c-8008-9ea0-d53dc6965e3d" class="bulleted-list"><li style="list-style-type:disc"><strong>브랜드 개념 재정비:</strong> 무분별하게 등록된 브랜드 데이터를 ‘메이커’와 ‘브랜드’로 구분해 체계화하고, 전체 관리 프로세스를 개선</li></ul><ul id="179c4d1c-6b3c-8020-90c8-fe19b28c6675" class="bulleted-list"><li style="list-style-type:disc"><strong>중복 브랜드 정제</strong>: Python의 g2p 라이브러리를 활용해 영문·한글 중복 브랜드 개수를 58건에서 12건으로 대폭 축소</li></ul><ul id="179c4d1c-6b3c-80c1-bd58-d0059c8a914e" class="bulleted-list"><li style="list-style-type:disc"><strong>브랜드 관리 프로세스 개선</strong>: 타 팀에서 개별적으로 관리하던 브랜드 정보를 분리·통합하고, 브랜드 정보 수정 및 등록 프로세스를 체계화</li></ul><ul id="179c4d1c-6b3c-806e-a242-f5349e576457" class="bulleted-list"><li style="list-style-type:disc"><strong>테이블 구조 개편</strong>: 브랜드 테이블을 한글·영어·일반 브랜드명으로 구분하여 중복 등록을 방지하고, 브랜드 동의어·셀러 테이블을 신설해 관리 효율성 증대</li></ul><ul id="179c4d1c-6b3c-80f6-b191-f330cef6c74e" class="bulleted-list"><li style="list-style-type:disc"><strong>브랜드 매칭률 향상</strong>: 카탈로그 이름을 음절 단위로 분석해 브랜드 매칭률을 22%에서 71%로 개선</li></ul><ul id="179c4d1c-6b3c-8038-ace5-cfd033abf899" class="bulleted-list"><li style="list-style-type:disc"><strong>브랜드 검색 엔진 구축</strong>: ElasticSearch를 활용해 비슷한 영문명이나 동의어로 검색해도 정확한 브랜드 정보를 찾을 수 있는 검색 기능 구현</li></ul><p id="179c4d1c-6b3c-8070-a64f-e41a882b80c5" class="">
+</p></div></div><p id="179c4d1c-6b3c-8057-9ec1-f0d56c5926a6" class="">
+</p><p id="179c4d1c-6b3c-8095-a35f-fe35be9d083f" class="">
+</p><hr id="179c4d1c-6b3c-80af-b059-c39f9d095518"/><h1 id="179c4d1c-6b3c-8050-91a8-c7dbe65bdfb2" class=""><mark class="highlight-teal">대외 경험.</mark></h1><ul id="179c4d1c-6b3c-80b8-9e88-f64c52fa6c96" class="bulleted-list"><li style="list-style-type:disc"><strong>Kubernetes 스터디 강의</strong>: 현직 개발자 11명 대상 진행</li></ul><ul id="179c4d1c-6b3c-8036-b3e6-ffcd71127cfa" class="bulleted-list"><li style="list-style-type:disc"><strong>비전공자 출신 개발자 취업하기 스터디 강의</strong>: 총 8명 대상 진행</li></ul><ul id="179c4d1c-6b3c-80d3-b96d-c79c42cc7461" class="bulleted-list"><li style="list-style-type:disc"><strong>Kafka 사내 스터디</strong>: 총 4명 참여</li></ul><ul id="179c4d1c-6b3c-80ba-879e-db2be9b169ec" class="bulleted-list"><li style="list-style-type:disc"><strong>AWS 클라우드 활용 강의</strong> 수료</li></ul><ul id="179c4d1c-6b3c-80f9-baa8-ff6c46b47549" class="bulleted-list"><li style="list-style-type:disc"><strong>쿠버네티스 운영 강의 수료</strong></li></ul><p id="179c4d1c-6b3c-80c2-b1f3-e24db63a2798" class="">
+</p><hr id="179c4d1c-6b3c-808c-9c7d-e729ccf0fcb9"/><h1 id="179c4d1c-6b3c-8072-94eb-c91a2c48d7d6" class=""><mark class="highlight-teal">기술.</mark></h1><ul id="179c4d1c-6b3c-801e-b32b-e01681201bd4" class="bulleted-list"><li style="list-style-type:disc">프론트앤드 : JavaScript, TypeScript</li></ul><ul id="179c4d1c-6b3c-803d-8b84-cf08f8d9a25b" class="bulleted-list"><li style="list-style-type:disc">백앤드 : Java, Python, Spring Boot, Spring Batch, Kotlin, GoLang</li></ul><ul id="179c4d1c-6b3c-804b-b74d-c02cdedba2fe" class="bulleted-list"><li style="list-style-type:disc">데이터베이스 : 오라클, MySql, PostgreSQL</li></ul><ul id="179c4d1c-6b3c-807e-af2a-f4ce750b82c0" class="bulleted-list"><li style="list-style-type:disc">기타 : Kubernetes, Docker, Docker Compose, Kafka, AWS, GCP, ElasticSearch</li></ul><p id="179c4d1c-6b3c-80ae-98e8-e6078f382570" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
