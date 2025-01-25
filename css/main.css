@@ -1,0 +1,41 @@
+html {
+    background-color: #14540d;
+    color: #EEEEEE;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+ }
+
+.greeting {
+    text-align: left;
+    font-size: clamp(3rem, 4vw, 5rem);
+    line-height: 1.5;
+    margin: 0;
+    white-space: pre-line;
+}
+
+/* 입장 아이콘 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: -10vh;
+ }
+ 
+ .circle-arrow {
+    color: #EEEEEE;
+    transform: scale(2);
+ }
+ 
+ .circle-arrow svg {
+    stroke-width: 1;
+ }
+ 
+ .circle-arrow:hover {
+    opacity: 0.8;
+    transform: scale(2) translateX(5px);
+    transition: all 0.3s ease;
+ }

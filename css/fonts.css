@@ -1,0 +1,53 @@
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+@font-face {
+    font-family: 'YESMyoungjo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.myongjo-font-regular {
+    font-family: 'YESMyoungjo-Regular', serif;
+    font-weight: 400;
+}
+
+.myongjo-font-bold {
+    font-family: 'YESMyoungjo-Regular', serif;
+    font-weight: 700;
+}
+
+.wanted-font-light {     
+    font-family: "Wanted Sans Variable";
+    font-weight: 300;
+}
+.wanted-font-regular { 
+    font-family: "Wanted Sans Variable";
+    font-weight: 400; 
+}
+.wanted-font-medium { 
+    font-family: "Wanted Sans Variable";
+    font-weight: 500; 
+}
+.wanted-font-semibold { 
+    font-family: "Wanted Sans Variable";
+    font-weight: 600; 
+}
+.wanted-font-bold { 
+    font-family: "Wanted Sans Variable";
+    font-weight: 700; 
+}
+.wanted-font-extrabold { 
+    font-family: "Wanted Sans Variable";
+    font-weight: 800; 
+}
+.wanted-font-black {     
+    font-family: "Wanted Sans Variable";
+    font-weight: 900; 
+}
+.wanted-font-ultrablack { 
+    font-family: "Wanted Sans Variable";
+    font-weight: 950; 
+}
+.font-point {
+    color: #14540d;
+}

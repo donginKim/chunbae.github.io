@@ -1,0 +1,31 @@
+.row {
+    display: flex;
+    padding: 3rem 0;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: left;
+}
+
+.row-left {
+    flex-basis: 18rem;
+    padding-right: 1rem;
+    flex-shrink: 0;
+}
+
+.row-right {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.role {
+    font-size: 16px;
+    color: #222;
+    line-height: 1.5;
+}
+
+.project:first-child {
+    padding-top: 0;
+}
+
+.project {
+    padding: 1.5rem 0;
+}
