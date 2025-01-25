@@ -28,6 +28,7 @@ ul {
     margin: 0 0 1rem;
     font-size: 1.1rem;
     text-align: left;
+    width: 100%;
 }
 
 ul>li {
@@ -43,7 +44,7 @@ ul>li:before {
     color: #14540d;
 }
 
-.header, .profile, .experience {
+.header, .profile, .experience, .contact {
     width: 100%;
     text-align: center;
     margin: 10;
