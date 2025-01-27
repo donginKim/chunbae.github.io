@@ -1,14 +1,14 @@
 // src/App.jsx
 import React from 'react';
-import { LanguageProvider } from './context/LanguageContext.jsx';
+import { LanguageProvider } from './context/LanguageContext.js';
 import ScrollToTop from './components/common/ScrollToTop.jsx';
-import LanguageSwitch from './components/common/LanguageSwitch';
-import Header from './components/layout/Header';
-import Hero from './components/sections/Hero';
-import About from './components/sections/About';
-import Experience from './components/sections/Experience';
-import Skills from './components/sections/Skills';
-import Contact from './components/sections/Contact';
+import LanguageSwitch from './components/common/LanguageSwitch.jsx';
+import Header from './components/layout/Header.jsx';
+import Hero from './components/sections/Hero.jsx';
+import About from './components/sections/About.jsx';
+import Experience from './components/sections/Experience.jsx';
+import Skills from './components/sections/Skills.jsx';
+import Contact from './components/sections/Contact.jsx';
 
 
 const App = () => {
