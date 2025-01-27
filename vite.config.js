@@ -6,5 +6,5 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx']  // 자동으로 처리할 확장자 목록
   },
-  base: '/',
+  base: '/donginKim.github.io/',
 })
