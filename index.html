@@ -1,44 +1,13 @@
-<html>
-	<head>
-		<title>Dongin Kim</title>
-		<link rel="icon" type="image/x-icon" href="icon/favicon.ico">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/fonts.css">
-
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-	</head>
-	<body>
-		<div class="container">
-			<p class="greeting wanted-font-semibold"></p>
-			<script>
-				new Typed('.greeting', {
-					strings: [
-						'Hello,<br/>I\'m Dongin Kim.',
-						'반갑습니다,<br/>저는 김동인입니다.'
-					],
-					typeSpeed: 100,
-					backSpeed: 50,
-					backDelay: 2000,
-					showCursor: false,
-					loop: false
-				});
-			</script>
-		</div>
-		<div>
-			<div class="social-links">
-				<a href="resume/kor.html" class="circle-arrow">
-				  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none"/>
-					<path d="M12 8L16 12M16 12L12 16M16 12H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-				  </svg>
-				</a>
-			   </div>
-		</div>
-	</body>
-	
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico" href="/src/assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dongin Kim</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

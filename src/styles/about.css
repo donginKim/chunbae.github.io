@@ -1,0 +1,25 @@
+.year {
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    transition: color 0.3s ease;
+}
+
+.year:hover {
+    color: #009966;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateX(-5px);
+}
+
+.prose p {
+    transition: opacity 0.3s ease;
+}
+
+.prose p:hover {
+    opacity: 0.8;
+}
