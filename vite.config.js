@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'] // 확장자 명시적 처리
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  base: './', // GitHub Pages용 상대 경로
+  base: './',
   build: {
     outDir: 'dist'
   }

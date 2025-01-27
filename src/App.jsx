@@ -1,6 +1,6 @@
 // src/App.jsx
 import React from 'react';
-import { LanguageProvider } from './context/LanguageContext.js';
+import { LanguageProvider } from './context/LanguageContext';
 import ScrollToTop from './components/common/ScrollToTop.jsx';
 import LanguageSwitch from './components/common/LanguageSwitch.jsx';
 import Header from './components/layout/Header.jsx';
