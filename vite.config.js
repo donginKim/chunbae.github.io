@@ -6,5 +6,8 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx']  // 자동으로 처리할 확장자 목록
   },
-  base: '/donginKim.github.io/',
+  base: './', // GitHub Pages에서는 상대 경로 사용 권장
+  build: {
+    outDir: 'dist'
+  }
 })
