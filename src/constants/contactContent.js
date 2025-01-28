@@ -3,7 +3,7 @@ export const contactContent = {
       title: "연락처",
       subtitle: "회사의 성장에 확실히 기여하며 함께 발전하는 개발자가 되겠습니다. 소중한 연락 기다리겠습니다.",
       contacts: {
-        email: "example@email.com",
+        email: "steve99890@gmail.com",
         phone: "+82 10-4039-6287",
         location: "수원, 대한민국"
       },
@@ -18,7 +18,7 @@ export const contactContent = {
       title: "Contact",
       subtitle: "I will contribute significantly to the growth of your company and grow together as a developer. I look forward to hearing from you.",
       contacts: {
-        email: "example@email.com",
+        email: "steve99890@gmail.com",
         phone: "+82 10-4039-6287",
         location: "Suwon, South Korea"
       },

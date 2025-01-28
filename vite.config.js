@@ -6,7 +6,7 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  base: '/',
+  base: '/donginKim.github.io/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
