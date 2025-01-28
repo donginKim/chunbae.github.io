@@ -32,6 +32,12 @@ jobs:
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
       
+      # MIME type 설정을 위한 _headers 파일 생성
+      - name: Create _headers
+        run: |
+          echo "/*" > ./dist/_headers
+          echo "  Content-Type: text/javascript" >> ./dist/_headers
+      
       - name: Setup Pages
         uses: actions/configure-pages@v3
       

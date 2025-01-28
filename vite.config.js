@@ -6,7 +6,7 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  base: '/', // './'에서 '/'로 변경
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -17,10 +17,12 @@ export default defineConfig({
             return 'vendor';
           }
         }
-      },
-      input: {
-        main: './index.html'
       }
+    }
+  },
+  server: {
+    headers: {
+      'Content-Type': 'text/javascript'
     }
   }
 })
