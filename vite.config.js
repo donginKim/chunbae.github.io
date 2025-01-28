@@ -8,6 +8,8 @@ export default defineConfig({
   },
   base: './',
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -15,6 +17,9 @@ export default defineConfig({
             return 'vendor';
           }
         }
+      },
+      input: {
+        main: './index.html'
       }
     }
   }
