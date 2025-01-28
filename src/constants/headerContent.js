@@ -8,9 +8,9 @@ export const content = {
     },
     en: {
       title: "DONGIN KIM",
-      about: "about",
-      experience: "experience",
-      skills: "skills",
-      contact: "contact"
+      about: "About",
+      experience: "Experience",
+      skills: "Skills",
+      contact: "Contact"
     }
   };
