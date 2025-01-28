@@ -6,7 +6,7 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
-  base: './',
+  base: '/', // './'에서 '/'로 변경
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

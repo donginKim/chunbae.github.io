@@ -10,6 +10,9 @@ permissions:
 
 jobs:
   build-and-deploy:
+    environment:
+      name: github-pages
+      url: https://donginkim.github.io
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,8 +38,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # dist 디렉터리 업로드
           path: './dist'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
